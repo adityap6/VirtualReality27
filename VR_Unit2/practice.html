@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+      </a-assets>
+
+      <a-entity position="0 0 0">
+        <a-cylinder segment-radial="1" side="double" color="gray" radius="1"height="5" position="0 2.5 0"></a-cylinder>
+        <a-cone position="0 5.5 0" color="gray"></a-cone>
+        <a-circle position="0 4 1" color="cyan" opacity=".75" radius=".25"></a-circle>
+        <a-circle position="0 3 1" color="cyan" opacity=".75" radius=".25"></a-circle>
+        <a-circle position="0 2 1" color="cyan" opacity=".75" radius=".25"></a-circle>
+        <a-circle position="0 1 1" color="cyan" opacity=".75" radius=".25"></a-circle>
+        <a-ring rotation="90 0 0" position="0 0.5 0" side="double" color="cyan"></a-ring>
+        <a-ring rotation="90 0 0" position="0 1.5 0" side="double"color="cyan"></a-ring>
+        <a-ring rotation="90 0 0" position="0 2.5 0" side="double"color="cyan"></a-ring>
+        <a-ring rotation="90 0 0" position="0 3.5 0" side="double"color="cyan"></a-ring>
+        <a-circle position="0 4 -1" side="double" color="cyan" opacity=".75" radius=".25"></a-circle>
+        <a-circle position="0 3 -1" side="double" color="cyan" opacity=".75" radius=".25"></a-circle>
+        <a-circle position="0 2 -1" side="double" color="cyan" opacity=".75" radius=".25"></a-circle>
+        <a-circle position="0 1 -1" side="double" color="cyan" opacity=".75" radius=".25"></a-circle>
+        <a-triangle
+            vertex-a="-2 1 0"
+            vertex-b="0 6 0"
+            vertex-c="0 1 0"
+            side="double"
+            color="red"
+        ></a-triangle>
+        <a-triangle
+            vertex-a="2 1 0"
+            vertex-b="0 6 0"
+            vertex-c="0 1 0"
+            side="double"
+            color="red"
+        ></a-triangle>
+      </a-entity>
+
+
+      <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+      <a-camera position="0 1.4 3"></a-camera>
+
+
+
+
+
+
+      
+    </a-scene>
+  </body>
+</html>

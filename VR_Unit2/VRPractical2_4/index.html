@@ -1,18 +1,858 @@
-<html>
+<aside>
+  <head>
+
   <head>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
-    <script src="script.js"></script>
+    <script src="rocket.js" ></script>
+    <script src="UFO.js" ></script>
+    <script src="snowflake.js"></script>
+    <script src="script.js" ></script>
+    <!-- ORDER MATTERS -->
   </head>
   <body>
       <a-scene>
-        <!-- Challenge 1: Add a propriate plane and sky for the missile launch site -->
-    
+       <a-entity position="0 0 -12.5">
+  <a-box width="2.25" height="3.5" depth="0.15" position="1.125 1.75 0" color="#E8D9BE"></a-box>
+  <a-box width="2.25" height="3.5" depth="0.15" position="4.875 1.75 0" color="#E8D9BE"></a-box>
+  <a-box width="1.5" height="1" depth="0.15" position="3 3 0" color="#E8D9BE"></a-box>
+  <a-triangle
+      vertex-a="0 0 0"
+      vertex-b="6 0 0"
+      vertex-c="3 2.65 0"
+      position="0 3.5 -0.09"
+      material="side: double"
+      color="#E8D9BE">
+  </a-triangle>
+  <a-box width="6" height="3.5" depth="0.15" position="3 1.75 -7.35" color="#E8D9BE"></a-box>
+  <a-triangle
+      vertex-a="0 0 0"
+      vertex-b="6 0 0"
+      vertex-c="3 2.65 0"
+      position="0 3.5 -7.44"
+      material="side: double"
+      color="#E8D9BE">
+  </a-triangle>
+  <a-box width="7.35" height="3.5" depth="0.15" position="0 1.75 -3.675" rotation="0 90 0" color="#E8D9BE"></a-box>
+  <a-box width="7.35" height="3.5" depth="0.15" position="6 1.75 -3.675" rotation="0 90 0" color="#E8D9BE"></a-box>
+  <a-box width="4.25" height="0.18" depth="7.8" position="1.5 4.95 -3.675" rotation="0 0 42" color="#8B4932"></a-box>
+  <a-box width="4.25" height="0.18" depth="7.8" position="4.5 4.95 -3.675" rotation="0 0 -42" color="#8B4932"></a-box>
+  <a-box width="1.45" height="2.5" depth="0.06" position="3 1.25 0.12" color="#70452D"></a-box>
+  <a-sphere radius="0.20" position="3.5 1.3 0.17" color="#E8B84D"></a-sphere>
+
+  <a-box width="0.9" height="1.1" depth="0.05" position="1.1 2.2 0.10" color="#9ED9E8"></a-box>
+  <a-box width="0.07" height="1.1" depth="0.04" position="1.1 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="0.07" depth="0.04" position="1.1 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="1.1" depth="0.04" position="4.9 2.2 0.10" color="#9ED9E8"></a-box>
+  <a-box width="0.07" height="1.1" depth="0.04" position="4.9 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="0.07" depth="0.04" position="4.9 2.2 0.14" color="white"></a-box>
+</a-entity>
+
+<a-entity position="-10 0 -12.5">
+  <a-box width="2.25" height="3.5" depth="0.15"
+         position="1.125 1.75 0"
+         color="#E8D9BE"></a-box>
+  <a-box width="2.25" height="3.5" depth="0.15" position="4.875 1.75 0" color="#E8D9BE"></a-box>
+  <a-box width="1.5" height="1" depth="0.15" position="3 3 0" color="#E8D9BE"></a-box>
+  <a-triangle
+      vertex-a="0 0 0"
+      vertex-b="6 0 0"
+      vertex-c="3 2.65 0"
+      position="0 3.5 -0.09"
+      material="side: double"
+      color="#E8D9BE">
+  </a-triangle>
+  <a-box width="6" height="3.5" depth="0.15" position="3 1.75 -7.35" color="#E8D9BE"></a-box>
+  <a-triangle
+      vertex-a="0 0 0"
+      vertex-b="6 0 0"
+      vertex-c="3 2.65 0"
+      position="0 3.5 -7.44"
+      material="side: double"
+      color="#E8D9BE">
+  </a-triangle>
+  <a-box width="7.35" height="3.5" depth="0.15" position="0 1.75 -3.675" rotation="0 90 0" color="#E8D9BE"></a-box>
+  <a-box width="7.35" height="3.5" depth="0.15" position="6 1.75 -3.675" rotation="0 90 0" color="#E8D9BE"></a-box>
+  <a-box width="4.25" height="0.18" depth="7.8" position="1.5 4.95 -3.675" rotation="0 0 42" color="#8B4932"></a-box>
+  <a-box width="4.25" height="0.18" depth="7.8" position="4.5 4.95 -3.675" rotation="0 0 -42" color="#8B4932"></a-box>
+  <a-box width="1.45" height="2.5" depth="0.06" position="3 1.25 0.12" color="#70452D"></a-box>
+  <a-sphere radius="0.20" position="3.5 1.3 0.17" color="#E8B84D"></a-sphere>
+
+  <a-box width="0.9" height="1.1" depth="0.05" position="1.1 2.2 0.10" color="#9ED9E8"></a-box>
+  <a-box width="0.07" height="1.1" depth="0.04" position="1.1 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="0.07" depth="0.04" position="1.1 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="1.1" depth="0.04" position="4.9 2.2 0.10" color="#9ED9E8"></a-box>
+  <a-box width="0.07" height="1.1" depth="0.04" position="4.9 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="0.07" depth="0.04" position="4.9 2.2 0.14" color="white"></a-box>
+</a-entity>
+
+
+<a-entity position="-20 0 -12.5">
+  <a-box width="2.25" height="3.5" depth="0.15"
+         position="1.125 1.75 0"
+         color="#E8D9BE"></a-box>
+  <a-box width="2.25" height="3.5" depth="0.15"
+         position="4.875 1.75 0"
+         color="#E8D9BE"></a-box>
+
+  <a-box width="1.5" height="1" depth="0.15"
+         position="3 3 0"
+         color="#E8D9BE"></a-box>
+
+  <a-triangle
+      vertex-a="0 0 0"
+      vertex-b="6 0 0"
+      vertex-c="3 2.65 0"
+      position="0 3.5 -0.09"
+      material="side: double"
+      color="#E8D9BE">
+  </a-triangle>
+
+  <a-box width="6" height="3.5" depth="0.15" position="3 1.75 -7.35" color="#E8D9BE"></a-box>
+  
+  <a-triangle
+      vertex-a="0 0 0"
+      vertex-b="6 0 0"
+      vertex-c="3 2.65 0"
+      position="0 3.5 -7.44"
+      material="side: double"
+      color="#E8D9BE">
+  </a-triangle>
+
+  <a-box width="7.35" height="3.5" depth="0.15" position="0 1.75 -3.675" rotation="0 90 0" color="#E8D9BE"></a-box>
+  <a-box width="7.35" height="3.5" depth="0.15" position="6 1.75 -3.675" rotation="0 90 0" color="#E8D9BE"></a-box>
+  <a-box width="4.25" height="0.18" depth="7.8" position="1.5 4.95 -3.675" rotation="0 0 42" color="#8B4932"></a-box>
+  <a-box width="4.25" height="0.18" depth="7.8" position="4.5 4.95 -3.675" rotation="0 0 -42" color="#8B4932"></a-box>
+  <a-box width="1.45" height="2.5" depth="0.06" position="3 1.25 0.12" color="#70452D"></a-box>
+  <a-sphere radius="0.20" position="3.5 1.3 0.17" color="#E8B84D"></a-sphere>
+
+  <a-box width="0.9" height="1.1" depth="0.05" position="1.1 2.2 0.10" color="#9ED9E8"></a-box>
+  <a-box width="0.07" height="1.1" depth="0.04" position="1.1 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="0.07" depth="0.04" position="1.1 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="1.1" depth="0.04" position="4.9 2.2 0.10" color="#9ED9E8"></a-box>
+  <a-box width="0.07" height="1.1" depth="0.04" position="4.9 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="0.07" depth="0.04" position="4.9 2.2 0.14" color="white"></a-box>
+</a-entity>
+
+<a-entity position="0 0 17.5" rotation="0 180 0 ">
+  <a-box width="2.25" height="3.5" depth="0.15"
+         position="1.125 1.75 0"
+         color="#E8D9BE"></a-box>
+  <a-box width="2.25" height="3.5" depth="0.15"
+         position="4.875 1.75 0"
+         color="#E8D9BE"></a-box>
+
+  <a-box width="1.5" height="1" depth="0.15"
+         position="3 3 0"
+         color="#E8D9BE"></a-box>
+
+  <a-triangle
+      vertex-a="0 0 0"
+      vertex-b="6 0 0"
+      vertex-c="3 2.65 0"
+      position="0 3.5 -0.09"
+      material="side: double"
+      color="#E8D9BE">
+  </a-triangle>
+
+  <a-box width="6" height="3.5" depth="0.15" position="3 1.75 -7.35" color="#E8D9BE"></a-box>
+  
+  <a-triangle
+      vertex-a="0 0 0"
+      vertex-b="6 0 0"
+      vertex-c="3 2.65 0"
+      position="0 3.5 -7.44"
+      material="side: double"
+      color="#E8D9BE">
+  </a-triangle>
+
+  <a-box width="7.35" height="3.5" depth="0.15" position="0 1.75 -3.675" rotation="0 90 0" color="#E8D9BE"></a-box>
+  <a-box width="7.35" height="3.5" depth="0.15" position="6 1.75 -3.675" rotation="0 90 0" color="#E8D9BE"></a-box>
+  <a-box width="4.25" height="0.18" depth="7.8" position="1.5 4.95 -3.675" rotation="0 0 42" color="#8B4932"></a-box>
+  <a-box width="4.25" height="0.18" depth="7.8" position="4.5 4.95 -3.675" rotation="0 0 -42" color="#8B4932"></a-box>
+  <a-box width="1.45" height="2.5" depth="0.06" position="3 1.25 0.12" color="#70452D"></a-box>
+  <a-sphere radius="0.20" position="3.5 1.3 0.17" color="#E8B84D"></a-sphere>
+  <a-box width="0.9" height="1.1" depth="0.05" position="1.1 2.2 0.10" color="#9ED9E8"></a-box>
+  <a-box width="0.07" height="1.1" depth="0.04" position="1.1 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="0.07" depth="0.04" position="1.1 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="1.1" depth="0.04" position="4.9 2.2 0.10" color="#9ED9E8"></a-box>
+  <a-box width="0.07" height="1.1" depth="0.04" position="4.9 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="0.07" depth="0.04" position="4.9 2.2 0.14" color="white"></a-box>
+</a-entity>
+
+
+<a-entity position="-10 0 17.5" rotation="0 180 0 ">
+  <a-box width="2.25" height="3.5" depth="0.15"
+         position="1.125 1.75 0"
+         color="#E8D9BE"></a-box>
+  <a-box width="2.25" height="3.5" depth="0.15"
+         position="4.875 1.75 0"
+         color="#E8D9BE"></a-box>
+
+  <a-box width="1.5" height="1" depth="0.15"
+         position="3 3 0"
+         color="#E8D9BE"></a-box>
+
+  <a-triangle
+      vertex-a="0 0 0"
+      vertex-b="6 0 0"
+      vertex-c="3 2.65 0"
+      position="0 3.5 -0.09"
+      material="side: double"
+      color="#E8D9BE">
+  </a-triangle>
+
+  <a-box width="6" height="3.5" depth="0.15" position="3 1.75 -7.35" color="#E8D9BE"></a-box>
+  
+  <a-triangle
+      vertex-a="0 0 0"
+      vertex-b="6 0 0"
+      vertex-c="3 2.65 0"
+      position="0 3.5 -7.44"
+      material="side: double"
+      color="#E8D9BE">
+  </a-triangle>
+
+  <a-box width="7.35" height="3.5" depth="0.15" position="0 1.75 -3.675" rotation="0 90 0" color="#E8D9BE"></a-box>
+  <a-box width="7.35" height="3.5" depth="0.15" position="6 1.75 -3.675" rotation="0 90 0" color="#E8D9BE"></a-box>
+  <a-box width="4.25" height="0.18" depth="7.8" position="1.5 4.95 -3.675" rotation="0 0 42" color="#8B4932"></a-box>
+  <a-box width="4.25" height="0.18" depth="7.8" position="4.5 4.95 -3.675" rotation="0 0 -42" color="#8B4932"></a-box>
+  <a-box width="1.45" height="2.5" depth="0.06" position="3 1.25 0.12" color="#70452D"></a-box>
+  <a-sphere radius="0.20" position="3.5 1.3 0.17" color="#E8B84D"></a-sphere>
+
+  <a-box width="0.9" height="1.1" depth="0.05" position="1.1 2.2 0.10" color="#9ED9E8"></a-box>
+  <a-box width="0.07" height="1.1" depth="0.04" position="1.1 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="0.07" depth="0.04" position="1.1 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="1.1" depth="0.04" position="4.9 2.2 0.10" color="#9ED9E8"></a-box>
+  <a-box width="0.07" height="1.1" depth="0.04" position="4.9 2.2 0.14" color="white"></a-box>
+  <a-box width="0.9" height="0.07" depth="0.04" position="4.9 2.2 0.14" color="white"></a-box>
+</a-entity>
+
+    <a-entity>
+              <a-box position="-1 1 1" height=".5" width="3" depth="2" color="#f754a6" side: double;></a-box>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="-2 .5 0" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="0 .5 0" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="0 .5 2" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="-2 .5 2" src="tire.png"></a-cylinder>
+              <a-triangle
+                vertex-a="-2.5 1.25 2"
+                vertex-b="-1.5 1.25 2"
+                vertex-c="-1.5 2 2"
+                material="color: #f754a6; side: double;"
+              ></a-triangle>
+              <a-triangle
+                vertex-a="-2.5 1.25 0"
+                vertex-b="-1.5 1.25 0"
+                vertex-c="-1.5 2 0"
+                material="color: #f754a6; side: double;"
+              ></a-triangle>
+              <a-plane
+                position="-2 1.5 1"
+                rotation="45 90 0"
+                width="2"
+                height="1.4"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-.5 1.5 0"
+                width="2"
+                material="color: #f754a6; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-.5 1.5 2"
+                width="2"
+                material="color: #f754a6; side: double;"
+              ></a-plane>
+              <a-plane 
+                rotation="0 90 0"
+                position=".5 1.5 1"
+                width="2"
+                material="color: #f754a6; side: double;"
+              ></a-plane>
+              <a-plane
+                rotation="90 0 0"
+                position="-.5 2 1"
+                width="2"
+                height="2"
+                material="color: #f754a6; side: double;"
+              ></a-plane>
+              <a-circle material="color: yellow; side: double;" position="-2.51 1 1.75" radius=".2" rotation="0 90 0"></a-circle>
+              <a-circle material="color: yellow; side: double;" position="-2.51 1 .25" radius=".2" rotation="0 90 0"></a-circle>
+              <a-plane
+                position="-5.51 1.75 6.5"
+                rotation="0 90 0"
+                width="1.75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="0 1.685 -0.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-1 1.685 -.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-1 1.685 2.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="0 1.685 2.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+      </a-entity>
+
+      <a-entity position ="-5 0 0">        
+              <a-box position="-1 1 1" height=".5" width="3" depth="2" color="#a9e8e3" side: double;></a-box>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="-2 .5 0" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="0 .5 0" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="0 .5 2" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="-2 .5 2" src="tire.png"></a-cylinder>
+              <a-triangle
+                vertex-a="-2.5 1.25 2"
+                vertex-b="-1.5 1.25 2"
+                vertex-c="-1.5 2 2"
+                material="color: #a9e8e3; side: double;"
+              ></a-triangle>
+              <a-triangle
+                vertex-a="-2.5 1.25 0"
+                vertex-b="-1.5 1.25 0"
+                vertex-c="-1.5 2 0"
+                material="color: #a9e8e3; side: double;"
+              ></a-triangle>
+              <a-plane
+                position="-2 1.5 1"
+                rotation="45 90 0"
+                width="2"
+                height="1.4"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-.5 1.5 0"
+                width="2"
+                material="color: #a9e8e3; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-.5 1.5 2"
+                width="2"
+                material="color: #a9e8e3; side: double;"
+              ></a-plane>
+              <a-plane 
+                rotation="0 90 0"
+                position=".5 1.5 1"
+                width="2"
+                material="color: #a9e8e3; side: double;"
+              ></a-plane>
+              <a-plane
+                rotation="90 0 0"
+                position="-.5 2 1"
+                width="2"
+                height="2"
+                material="color: #4287f5; side: double;"
+              ></a-plane>
+              <a-circle material="color: yellow; side: double;" position="-2.51 1 1.75" radius=".2" rotation="0 90 0"></a-circle>
+              <a-circle material="color: yellow; side: double;" position="-2.51 1 .25" radius=".2" rotation="0 90 0"></a-circle>
+                            <a-plane
+                position="0 1.685 -0.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-1 1.685 -.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-1 1.685 2.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="0 1.685 2.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+        </a-entity>
+
+        <a-entity position ="-10 0 0">        
+              <a-box position="-1 1 1" height=".5" width="3" depth="2" color="#e8a9a9" side: double;></a-box>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="-2 .5 0" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="0 .5 0" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="0 .5 2" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="-2 .5 2" src="tire.png"></a-cylinder>
+              <a-triangle
+                vertex-a="-2.5 1.25 2"
+                vertex-b="-1.5 1.25 2"
+                vertex-c="-1.5 2 2"
+                material="color: #e8a9a9; side: double;"
+              ></a-triangle>
+              <a-triangle
+                vertex-a="-2.5 1.25 0"
+                vertex-b="-1.5 1.25 0"
+                vertex-c="-1.5 2 0"
+                material="color: #e8a9a9; side: double;"
+              ></a-triangle>
+              <a-plane
+                position="-2 1.5 1"
+                rotation="45 90 0"
+                width="2"
+                height="1.4"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-.5 1.5 0"
+                width="2"
+                material="color: #e8a9a9; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-.5 1.5 2"
+                width="2"
+                material="color: #e8a9a9; side: double;"
+              ></a-plane>
+              <a-plane 
+                rotation="0 90 0"
+                position=".5 1.5 1"
+                width="2"
+                material="color: #e8a9a9; side: double;"
+              ></a-plane>
+              <a-plane
+                rotation="90 0 0"
+                position="-.5 2 1"
+                width="2"
+                height="2"
+                material="color: #e8a9a9; side: double;"
+              ></a-plane>
+              <a-circle material="color: yellow; side: double;" position="-2.51 1 1.75" radius=".2" rotation="0 90 0"></a-circle>
+              <a-circle material="color: yellow; side: double;" position="-2.51 1 .25" radius=".2" rotation="0 90 0"></a-circle>
+                            <a-plane
+                position="0 1.685 -0.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-1 1.685 -.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-1 1.685 2.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="0 1.685 2.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+        </a-entity>
+
+        <a-entity position ="-10 0 7.5" rotation="0 180 0">        
+              <a-box position="-1 1 1" height=".5" width="3" depth="2" color="#cee632" side: double;></a-box>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="-2 .5 0" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="0 .5 0" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="0 .5 2" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="-2 .5 2" src="tire.png"></a-cylinder>
+              <a-triangle
+                vertex-a="-2.5 1.25 2"
+                vertex-b="-1.5 1.25 2"
+                vertex-c="-1.5 2 2"
+                material="color: #cee632; side: double;"
+              ></a-triangle>
+              <a-triangle
+                vertex-a="-2.5 1.25 0"
+                vertex-b="-1.5 1.25 0"
+                vertex-c="-1.5 2 0"
+                material="color: #cee632; side: double;"
+              ></a-triangle>
+              <a-plane
+                position="-2 1.5 1"
+                rotation="45 90 0"
+                width="2"
+                height="1.4"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-.5 1.5 0"
+                width="2"
+                material="color: #cee632; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-.5 1.5 2"
+                width="2"
+                material="color: #cee632; side: double;"
+              ></a-plane>
+              <a-plane 
+                rotation="0 90 0"
+                position=".5 1.5 1"
+                width="2"
+                material="color: #cee632; side: double;"
+              ></a-plane>
+              <a-plane
+                rotation="90 0 0"
+                position="-.5 2 1"
+                width="2"
+                height="2"
+                material="color: #cee632; side: double;"
+              ></a-plane>
+              <a-circle material="color: yellow; side: double;" position="-2.51 1 1.75" radius=".2" rotation="0 90 0"></a-circle>
+              <a-circle material="color: yellow; side: double;" position="-2.51 1 .25" radius=".2" rotation="0 90 0"></a-circle>
+                            <a-plane
+                position="0 1.685 -0.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-1 1.685 -.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-1 1.685 2.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="0 1.685 2.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+        </a-entity>
+
+        <a-entity position ="-5 0 7.5" rotation="0 180 0">        
+              <a-box position="-1 1 1" height=".5" width="3" depth="2" color="#8e5bf5" side: double;></a-box>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="-2 .5 0" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="0 .5 0" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="0 .5 2" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="-2 .5 2" src="tire.png"></a-cylinder>
+              <a-triangle
+                vertex-a="-2.5 1.25 2"
+                vertex-b="-1.5 1.25 2"
+                vertex-c="-1.5 2 2"
+                material="color: #8e5bf5; side: double;"
+              ></a-triangle>
+              <a-triangle
+                vertex-a="-2.5 1.25 0"
+                vertex-b="-1.5 1.25 0"
+                vertex-c="-1.5 2 0"
+                material="color: #8e5bf5; side: double;"
+              ></a-triangle>
+              <a-plane
+                position="-2 1.5 1"
+                rotation="45 90 0"
+                width="2"
+                height="1.4"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-.5 1.5 0"
+                width="2"
+                material="color: #8e5bf5; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-.5 1.5 2"
+                width="2"
+                material="color: #8e5bf5; side: double;"
+              ></a-plane>
+              <a-plane 
+                rotation="0 90 0"
+                position=".5 1.5 1"
+                width="2"
+                material="color: #8e5bf5; side: double;"
+              ></a-plane>
+              <a-plane
+                rotation="90 0 0"
+                position="-.5 2 1"
+                width="2"
+                height="2"
+                material="color: #8e5bf5; side: double;"
+              ></a-plane>
+              <a-circle material="color: yellow; side: double;" position="-2.51 1 1.75" radius=".2" rotation="0 90 0"></a-circle>
+              <a-circle material="color: yellow; side: double;" position="-2.51 1 .25" radius=".2" rotation="0 90 0"></a-circle>
+              <a-plane
+                position="0 1.685 -0.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-1 1.685 -.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-1 1.685 2.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="0 1.685 2.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+            </a-entity>
+
+            <a-entity position ="0 0 7.5" rotation="0 180 0">        
+              <a-box position="-1 1 1" height=".5" width="3" depth="2" color="#4287f5" side: double;></a-box>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="-2 .5 0" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="0 .5 0" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="0 .5 2" src="tire.png"></a-cylinder>
+              <a-cylinder  radius="0.5" height=".2" rotation="0 90 90" position ="-2 .5 2" src="tire.png"></a-cylinder>
+              <a-triangle
+                vertex-a="-2.5 1.25 2"
+                vertex-b="-1.5 1.25 2"
+                vertex-c="-1.5 2 2"
+                material="color: #4287f5; side: double;"
+              ></a-triangle>
+              <a-triangle
+                vertex-a="-2.5 1.25 0"
+                vertex-b="-1.5 1.25 0"
+                vertex-c="-1.5 2 0"
+                material="color: #4287f5; side: double;"
+              ></a-triangle>
+              <a-plane
+                position="-2 1.5 1"
+                rotation="45 90 0"
+                width="2"
+                height="1.4"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-.5 1.5 0"
+                width="2"
+                material="color: #4287f5; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-.5 1.5 2"
+                width="2"
+                material="color: #4287f5; side: double;"
+              ></a-plane>
+              <a-plane 
+                rotation="0 90 0"
+                position=".5 1.5 1"
+                width="2"
+                material="color: #4287f5; side: double;"
+              ></a-plane>
+              <a-plane
+                rotation="90 0 0"
+                position="-.5 2 1"
+                width="2"
+                height="2"
+                material="color: #4287f5; side: double;"
+              ></a-plane>
+              <a-circle material="color: yellow; side: double;" position="-2.51 1 1.75" radius=".2" rotation="0 90 0"></a-circle>
+              <a-circle material="color: yellow; side: double;" position="-2.51 1 .25" radius=".2" rotation="0 90 0"></a-circle>
+                            <a-plane
+                position="0 1.685 -0.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-1 1.685 -.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="-1 1.685 2.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+              <a-plane
+                position="0 1.685 2.01"
+                rotation="0 0 0"
+                width=".75"
+                height=".5"
+                material="color: #61B7EB; side: double;"
+              ></a-plane>
+        </a-entity>     
         
+        <a-entity>
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity  position="5 0 -30">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity  position="-30 0 -30">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity position="-40 0 -33">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity position="-50 0 -40">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity  position="-32 0 -50">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity position="-53 0 -60">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity position="-56 0 32">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity  position="20 0 32">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity position="0 0 20">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity position="20 0 -35">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity position="25 0 -42">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity position="-5 0 -42">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity position="-13 0 -51">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity position="-13 0 -51">
+              <a-box position="5 0 19 " color="brown" height="6" depth="1" width="2"> </a-box>
+              <a-cone position="5 4 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 3.25 19" height="2" radius-bottom="2" color="green"></a-cone>
+              <a-cone position="5 2.5 19" height="2" radius-bottom="2" color="green"></a-cone>
+        </a-entity>
+        <a-entity>
+          
+          <a-plane
+            material="color: black; side: double;"
+            height="20"
+            width="5000"
+            rotation="90 0 0"
+            position="0 0 3"
+          ></a-plane>
+          <a-plane
+            material="color: yellow; side: double;"
+            height=".5"
+            width="5000"
+            rotation="90 0 0"
+            position="0 .1 4"
+          ></a-plane>
+          <a-plane
+            material="color: yellow; side: double;"
+            height=".5"
+            width="5000"
+            rotation="90 0 0"
+            position="0 .1 3"
+          ></a-plane>
+          <a-sky color="#87CEEB"></a-sky>
+          <a-plane
+            position="0 -.1 0"
+            rotation="90 0 0"
+            material="side: double;"
+            src="grass.avif"
+            repeat="30 30"
+            height="500"
+            width="500"
+            ></a-plane>
+           <a-plane
+            position="0 -.1 0"
+            rotation="90 0 0"
+            material="side: double;"
+            src="grass.avif"
+            repeat="30 30"
+            height="500"
+            width="500"
+          ></a-plane>
+        </a-entity>
+
       
       <!-- Camera is added so that you do not "spawn" at the origin -->
       <a-camera position="0 1.3 4"></a-camera>
-      <a-plane color="red" rotation="90 0 0" height="400" width="400" side="double"></a-plane>
-      <a-sky color="blue"></a-sky>
+      <a-plane color="green" rotation="90 0 0" height="400" width="400" side="double"></a-plane>
+      <a-sky color="lightblue"></a-sky>
     </a-scene>
   </body>
 </html>
